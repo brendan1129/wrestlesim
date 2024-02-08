@@ -64,11 +64,4 @@ public class WrestlerImageController {
             return ResponseEntity.internalServerError().body("Failed to upload image");
         }
     }
-    private String generateUniqueFilename(String originalFilename) {
-        int dotIndex = originalFilename.lastIndexOf(".");
-        String extension = dotIndex > 0 ? originalFilename.substring(dotIndex + 1) : "";
-        String baseName = dotIndex > 0 ? originalFilename.substring(0, dotIndex) : originalFilename;
-        String uniqueSuffix = UUID.randomUUID().toString();
-        return baseName + "-" + uniqueSuffix + "." + extension;
-    }
 }
