@@ -16,7 +16,7 @@ import java.util.List;
 @Builder
 public class Wrestler {
 
-    // Core wrestler attributes
+    // Descriptive Elements
     @Id
     private String id;
     private String name;
@@ -42,6 +42,15 @@ public class Wrestler {
     private List<String> finisherMoveList;
     private List<String> signatureMoveList;
     private List<String> moveList;
+    private List<String> tauntList;
+
+    // Match Effectors ( combine with wrestlingStyle to create gameplay scenarios )
+    int speed; // rate of progression to next move, likelihood to hit light attacks increases
+    int agility; // Ability to dodge, improves counter likelihood
+    int strength; // Increases move damage. Higher Strength = More capable of heavy attacks against more classes
+    int stamina; // Ability to hit multiple moves in succession.
+    int tolerance; // Like health or defense. Decreases move damage when receiving one.
+
     // Additional custom objects
     private List<Rivalry> rivalries; // Who they're against
     private List<Wrestler> tagTeamPartners; // Who they can tag with

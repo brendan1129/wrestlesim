@@ -27,7 +27,6 @@ public class WrestlerController {
     public ResponseEntity<?> createWrestler(@RequestBody Wrestler wrestler) {
         return ResponseEntity.status(HttpStatus.CREATED).body(service.createWrestler(wrestler));
     }
-
     @PutMapping("/{id}/update")
     public ResponseEntity<?> updateWrestler(@PathVariable String id, @RequestBody Wrestler wrestler ) {
         // Return a response with the updated wrestler and a success status code
