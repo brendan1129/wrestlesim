@@ -38,10 +38,14 @@ public class Wrestler {
     private Championship currentChampionship;
     private CardLevel cardLevel;
     private Federation currentFed;
-    // Moveset Specific attributes
-    private List<String> finisherMoveList;
-    private List<String> signatureMoveList;
-    private List<String> moveList;
+    private Orientation orientation;
+
+    // Moveset items
+    private WrestlerState state;
+    private WrestlerLocation location;
+    private List<WrestlingMove> finisherMoveList;
+    private List<WrestlingMove> signatureMoveList;
+    private List<WrestlingMove> moveSetList;
     private List<String> tauntList;
 
     // Match Effectors ( combine with wrestlingStyle to create gameplay scenarios )
@@ -50,6 +54,7 @@ public class Wrestler {
     int strength; // Increases move damage. Higher Strength = More capable of heavy attacks against more classes
     int stamina; // Ability to hit multiple moves in succession.
     int tolerance; // Like health or defense. Decreases move damage when receiving one.
+    int popularity; // 1 to 10
 
     // Additional custom objects
     private List<Rivalry> rivalries; // Who they're against

@@ -21,6 +21,8 @@ public class MatchEngine {
 
     List<String> matchText;
 
+    List<WrestlingMove> moves;
+
     int numSegments;
     public MatchEngine(List<Wrestler> participants, MatchType type, MatchStipulation stipulation, int segments) {
         this.numSegments = segments;
@@ -38,6 +40,7 @@ public class MatchEngine {
             }
         }
         matchText = new ArrayList<>();
+        moves = new ArrayList<>();
     }
 
     /** First approach:
